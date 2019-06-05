@@ -1,0 +1,542 @@
+body.skin-sispou > div.wrapper > header.main-header > nav.navbar {
+  background-color: #506C61;
+  height: 80px;
+  -webkit-box-shadow: 5px 5px 8px 0px rgba(202,203,204,1);
+  -moz-box-shadow: 5px 5px 8px 0px rgba(202,203,204,1);
+  box-shadow: 5px 5px 8px 0px rgba(202,203,204,1);
+}
+
+header.main-header > nav.navbar > a.sidebar-toggle:before {
+        font-family: 'Glyphicons Halflings';
+        content: "\e236";
+        font-weight: 100;
+        font-size: 15px;
+}
+
+ul.navbar-nav > li.dropdown > a > .label {
+  top: 40px!important;
+}
+
+.icon-perfil-header {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+@media (min-width: 768px) {
+  ul.navbar-nav > li.dropdown > a  {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #fff;
+  }
+  body > div.wrapper > header > nav > a.sidebar-toggle {
+    padding-top: 29px;
+    padding-bottom: 28px;
+  }
+}
+
+/*
+ * Skin: Sispou
+ * -----------
+ */
+.skin-sispou h1, .skin-sispou h2, .skin-sispou h3,
+.skin-sispou h4, .skin-sispou h5, .skin-sispou h6, 
+.skin-sispou .h1, .skin-sispou .h2, .skin-sispou .h3, 
+.skin-sispou .h4, .skin-sispou .h5, .skin-sispou .h6,
+.skin-sispou p, .skin-sispou span {
+  font-family: 'Open Sans', sans-serif;
+  color: #1B2D3B;
+}
+.skin-sispou a {
+  color: #1B2D3B;
+}
+.skin-sispou .label {
+  border-radius: 0;
+}
+.skin-sispou .main-header .navbar {
+  background-color: #638577;
+}
+.skin-sispou .navbar-custom-menu  .dropdown.account-menu > a span {
+  color: #fff;
+}
+.skin-sispou .main-header .navbar .nav > li > a {
+  color: #fff;
+}
+.skin-sispou .main-header .navbar .nav > li > a:hover,
+.skin-sispou .main-header .navbar .nav > li > a:active,
+.skin-sispou .main-header .navbar .nav > li > a:focus,
+.skin-sispou .main-header .navbar .nav .open > a,
+.skin-sispou .main-header .navbar .nav .open > a:hover,
+.skin-sispou .main-header .navbar .nav .open > a:focus,
+.skin-sispou .main-header .navbar .nav > .active > a {
+  background: rgba(0, 0, 0, 0.1);
+  color: #a8b550;
+}
+.skin-sispou .main-header .navbar .sidebar-toggle:hover {
+  color: #a8b550;
+  background: rgba(0, 0, 0, 0.1);
+}
+.skin-sispou .main-header .navbar .sidebar-toggle {
+  color: #fff;
+  padding: 29px 25px 28px;
+}
+.skin-sispou .main-header .navbar .sidebar-toggle:hover {
+  background-color: #638577;
+}
+@media (max-width: 767px) {
+  .skin-sispou .main-header .navbar .dropdown-menu li.divider {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .skin-sispou .main-header .navbar .dropdown-menu li a {
+    color: #fff;
+  }
+  .skin-sispou .main-header .navbar .dropdown-menu li a:hover {
+    background: #638577;
+  }
+}
+.skin-sispou .navbar-nav>.account-menu .user-image {
+    float: left;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: -2px;
+}
+.skin-sispou .main-header .logo {
+  color: #ffffff;
+  border-bottom: 0 solid transparent;
+  height: 60px;
+  background: #638577;
+}
+.skin-sispou .main-header .logo-lg h2{
+  font-size: 26px;
+  margin-top: 15px;
+  color: #ACB84F;
+}
+.skin-sispou .main-header .logo-lg h2 strong{
+  color: #1B2D3B;
+}
+.skin-sispou .main-header .logo,
+.skin-sispou .main-header .logo:hover,
+.skin-sispou .main-sidebar .user-panel {
+  background-color: #638577;
+}
+.skin-sispou .main-sidebar .user-panel {
+  padding: 0 15px 20px;
+}
+.skin-sispou .main-sidebar .user-panel h4 {
+  font-weight: 600;
+  margin: 0 0 5px;
+}
+.skin-sispou .main-sidebar .user-panel p{
+  margin: 0;
+}
+.skin-sispou .main-header .logo-lg {
+  line-height: 60px;
+}
+.skin-sispou .main-header li.user-header {
+  background-color: #00a65a;
+}
+.skin-sispou .content-header>h1 {
+  font-size: 28px;
+}
+.skin-sispou .content-header>.breadcrumb {
+  display: block;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 0;
+  position: relative;
+  border-radius: 2px;
+  float: none;
+  top: 0;
+  right: 0;
+}
+.skin-sispou .content-header {
+  background: transparent;
+  padding: 22px 22px 0 22px;
+}
+.skin-sispou .content {
+  padding: 22px;
+}
+.skin-sispou .wrapper,
+.skin-sispou .main-sidebar,
+.skin-sispou .left-side {
+  background-color: #9DB7AC!important;
+  border: none!important;
+}
+.skin-sispou .main-sidebar {
+  border-right: 1px solid #d2d6de;
+  padding-top: 60px;
+}
+.skin-sispou .user-panel > .info,
+.skin-sispou .user-panel > .info > a {
+  color: #444444;
+}
+.skin-sispou .sidebar-menu > li {
+  -webkit-transition: border-left-color 0.3s ease;
+  -o-transition: border-left-color 0.3s ease;
+  transition: border-left-color 0.3s ease;
+}
+.skin-sispou .sidebar-menu > li.header {
+  color: #848484;
+  background: #f9fafc;
+}
+.skin-sispou .sidebar-menu > li > a {
+  border-left: 3px solid transparent;
+  font-weight: 600;
+}
+.skin-sispou .sidebar-menu > li:hover > a,
+.skin-sispou .sidebar-menu > li.active > a {
+  color: #000000;
+  background: #8CA89C;
+}
+.skin-sispou .sidebar-menu > li.active > a {
+  border-left: solid 8px #ADB84F;
+}
+.skin-sispou .sidebar-menu > li.active {
+  border-left-color: #ADB84F;
+}
+.skin-sispou .sidebar-menu > li.active > a {
+  font-weight: 600;
+}
+.skin-sispou .sidebar-menu > li > .treeview-menu {
+  background: #8CA89C;
+  padding-bottom: 10px;   
+}
+.skin-sispou .sidebar-menu > li.active > .treeview-menu {
+  border-left: solid 8px #ADB84F;
+}
+.skin-sispou .sidebar a {
+  color: #1b2d3b;
+}
+.skin-sispou .sidebar a:hover {
+  text-decoration: none;
+}
+.skin-sispou .sidebar-menu .treeview-menu > li > a {
+  color: #1b2d3b;
+}
+.skin-sispou .sidebar-menu .treeview-menu > li.active > a,
+.skin-sispou .sidebar-menu .treeview-menu > li > a:hover {
+  color: #1b2d3b;
+  font-weight: 600;
+}
+.skin-sispou .sidebar-menu .treeview-menu > li.active > a {
+  font-weight: 600;
+}
+.skin-sispou .sidebar-form {
+  border-radius: 3px;
+  border: 1px solid #d2d6de;
+  margin: 10px 10px;
+}
+.skin-sispou .sidebar-form input[type="text"],
+.skin-sispou .sidebar-form .btn {
+  box-shadow: none;
+  background-color: #fff;
+  border: 1px solid transparent;
+  height: 35px;
+}
+.skin-sispou .sidebar-form input[type="text"] {
+  color: #666;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 2px;
+}
+.skin-sispou .sidebar-form input[type="text"]:focus,
+.skin-sispou .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  background-color: #fff;
+  color: #666;
+}
+.skin-sispou .sidebar-form input[type="text"]:focus + .input-group-btn .btn {
+  border-left-color: #fff;
+}
+.skin-sispou .sidebar-form .btn {
+  color: #999;
+  border-top-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+}
+@media (min-width: 768px) {
+  .skin-sispou.sidebar-mini.sidebar-collapse .sidebar-menu > li > .treeview-menu {
+    border-left: 1px solid #d2d6de;
+  }
+}
+
+.skin-sispou .pesquisa-reservas {
+    width: 350px;
+    height: 80px;
+    display: -webkit-inline-box;
+}
+
+.skin-sispou .pesquisa-reservas form{
+    height: fit-content;
+    display: inline;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+
+.skin-sispou .pesquisa-reservas #search-btn {
+  background: none;
+  color: #fff;
+}
+
+.skin-sispou .pesquisa-reservas #search-btn i {
+  font-size: 20px;
+}
+
+.skin-sispou .pesquisa-reservas .input-group input {
+  background: none!important;
+}
+.skin-sispou .pesquisa-reservas input {
+  color: #9AB4A9!important;
+  font-size: 16px;
+}
+.skin-sispou .pesquisa-reservas input::placeholder {
+  color: #9AB4A9;
+  font-size: 16px;
+}
+
+.skin-sispou a.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.main-footer.footer-sispou {
+  background: #CFCFCF;
+  border: none;
+  color: #1B2D3B;
+  font-size: 12px;
+}
+
+.bg-sispou {
+  background: #9DB7AC;
+}
+
+.skin-sispou .box.box-primary {
+  border-top-color: #789785;
+  border-radius: 0;
+}
+
+.sidebar-mini.sidebar-collapse .main-header .logo>.logo-mini b {
+    color: #1B2D3B!important;
+    font-size: 22px
+}
+
+.sidebar-mini.sidebar-collapse .main-header .logo>.logo-mini small {
+    color: #A9B550;
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar-mini.sidebar-collapse .main-header .logo>.logo-mini {
+    line-height: 18px;
+    padding: 15px 0;
+  }
+}
+
+.skin-sispou .content-wrapper {
+  background-color: #F6F7FB;
+}
+
+.mini-inicio-sispou {
+  position: absolute;
+  right: 22px;
+  bottom: 5px;
+}
+
+.skin-sispou .label-defalt {
+  background: #888888;
+  color: #fff;
+}
+
+
+.skin-sispou .navbar-nav>.notifications-menu>.dropdown-menu, 
+.skin-sispou .navbar-nav>.help-menu>.dropdown-menu,
+.skin-sispou .navbar-nav>.account-menu>.dropdown-menu {
+    width: 280px;
+    padding: 0 0 0 0;
+    margin: 0;
+    top: 100%;
+}
+
+.skin-sispou .navbar-nav>.notifications-menu>.dropdown-menu>li.header, 
+.skin-sispou .navbar-nav>.help-menu>.dropdown-menu>li.header {
+    border-radius: 0;
+    background-color: #fff;
+    padding: 7px 10px;
+    border-bottom: 1px solid #f4f4f4;
+    color: #1B2D3B;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-nav>.help-menu>.dropdown-menu>li .menu>li>a {
+    color: #444444;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+}
+
+.skin-sispou .navbar-nav>.notifications-menu>.dropdown-menu>li .menu, 
+.skin-sispou .navbar-nav>.help-menu>.dropdown-menu>li .menu {
+    max-height: 200px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+.skin-sispou .navbar-nav>.notifications-menu>.dropdown-menu>li .menu>li>a, 
+.skin-sispou .navbar-nav>.help-menu>.dropdown-menu>li .menu>li>a {
+    display: block;
+    white-space: nowrap;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.skin-sispou .navbar-nav>.account-menu>.dropdown-menu {
+    background: #1B2D3B;
+    color: #fff;
+}
+
+.skin-sispou .content-account-menu {
+  padding: 10px 0!important;
+}
+
+.skin-sispou .content-account-menu a {
+  padding: 10px 15px;
+  color: #789785;
+  border-radius: 0;
+  font-size: 16px
+}
+
+.skin-sispou .content-account-menu a:hover {
+  background: #1B2D3B;
+  color: #fff;
+  font-weight: 600;
+}
+
+.content-wrapper {
+  display: flow-root;
+}
+
+.btn-sispou {
+  border-radius: 0!important;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.btn-sispou a {  
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+}
+
+.btn-sispou-default {
+  background: #638577;
+}
+
+.btn-sispou-success {
+  background: #37966a;
+}
+
+.btn-sispou-return {
+  background: #bfbfbf;
+}
+
+.btn-sispou-cancel {
+  background: #F39C12;
+}
+
+.pagination>.active>a, 
+.pagination>.active>a:focus, 
+.pagination>.active>a:hover, 
+.pagination>.active>span, 
+.pagination>.active>span:focus, 
+.pagination>.active>span:hover {
+    background-color: #506C61;
+    border-color: #506C61;
+}
+
+.content-actions-after-table{
+  padding-bottom: 20px
+}
+
+.skin-sispou .bg-sispou-active {
+  background-color: #638577;
+}
+
+.content-actions-after-table .pagination{
+  margin: 0;
+}
+
+.box-last-signs ul {
+    list-style-type: none;
+    padding: 15px;
+}
+.box-last-signs ul > li > a::after {
+    content: '';
+    width: 3px;
+    height: 20px;
+    background: #bfbfbf;
+    position: absolute;
+    left: 15px;
+    margin-top: -30px;
+}
+
+.box-last-signs ul > li > a {
+    color: #506c61;
+    border-bottom: solid 1px #dddddd;
+}
+.box-last-signs ul li a small {
+    display: block;
+    color: #506c61;
+}
+.box-last-signs ul li {
+    padding: 5px 0;
+}
+
+/* Skin-sispou mobile */
+
+
+@media screen and (max-width: 991px) {
+  .skin-sispou .content-header>.breadcrumb {
+    background: transparent!important;
+  }
+  .skin-sispou .pesquisa-reservas {
+    width: 190px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body.skin-sispou > div.wrapper > header.main-header > nav.navbar {
+    height: 50px;
+  }
+  .pesquisa-reservas {
+    display: none!important;
+  }
+
+  .skin-sispou .main-header .navbar .sidebar-toggle {
+    padding: 13px 15px 14px;
+  }
+  .skin-sispou div.navbar-custom-menu > ul > li.dropdown.account.account-menu.open > a {
+    height: 50px;
+    box-shadow: none;
+  }
+  .skin-sispou .navbar-nav>.account-menu .user-image {
+    height: 25px;
+    border-radius: 50%;
+    margin: 0;
+  }
+  .skin-sispou .main-sidebar .user-panel {
+    padding-bottom: 5px;
+  }
+  .skin-sispou .content-wrapper {
+    display: block!important;
+  }
+  .skin-sispou .table-signs tbody td {
+    display: block;
+  }
+
+}

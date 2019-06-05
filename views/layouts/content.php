@@ -1,0 +1,6 @@
+
+
+
+<?php //= Alert::widget() ?>
+
+<?= $content ?>

@@ -1,0 +1,12 @@
+.box-alterar-senha {
+    padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .box-alterar-senha .widget-user-image {
+        display: none;
+    }
+    .box-alterar-senha .widget-user-header {
+        height: auto!important;
+    }
+}

@@ -1,0 +1,82 @@
+.info-box.resume-box .info-box-content {
+  height: 90px;
+}
+
+.info-box.resume-box .info-box-content span{
+  display: block;
+  height: 40px;
+  vertical-align: middle; 
+  line-height: 1em;
+}
+
+.icon-resume-box {
+  color: #fff!important;
+}
+.info-text-resume-box {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.info-text-resume-box small {
+  font-weight: 400;
+}
+.info-number-resume-box {
+  font-size: 25px
+}
+
+.skin-sispou .label-status-uh {
+  border-radius: 0;
+  font-weight: 400;
+}
+
+.skin-sispou .detals-uh {
+  padding: 0;
+}
+
+.skin-sispou .detals-uh li{
+  display: grid;
+  border-bottom: solid 1px #ddd;
+  padding: 10px;
+}
+
+.skin-sispou .detals-uh li.item-checkout {
+  background: #fff4e2;
+}
+
+.skin-sispou .detals-uh li.item-reserva {
+  background: #f0f0f0;  
+}
+
+.skin-sispou .detals-uh li:last-child {
+  border-bottom: none;
+}
+
+.skin-sispou .hospede-description {
+  color: #999;
+}
+.skin-sispou .hospede-id {
+  font-weight: 600;
+}
+
+.skin-sispou .disponibilidade-status {
+  color: #666;
+}
+
+/* Mobile */
+@media screen and (min-width: 991px) and (max-width: 1400px){
+  .info-text-resume-box {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .info-text-resume-box {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .info-text-resume-box {
+    font-size: 15px;
+  }
+}

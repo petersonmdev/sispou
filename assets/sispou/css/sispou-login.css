@@ -1,0 +1,206 @@
+body.login-page {
+    height: auto;
+    font-family: 'Open Sans', sans-serif;
+    background: -moz-linear-gradient(left, #799782 0%, #729d95 100%);
+    background: -webkit-linear-gradient(left, #799782 0%,#729d95 100%);
+    background: linear-gradient(to right, #799782 0%,#729d95 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#799782', endColorstr='#729d95',GradientType=1 );
+}
+
+.login-logo {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.login-page .login-box-body {
+    background: none;
+    color: #fff;
+}
+
+.login-box-msg {
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+
+.login-box-body > form i {
+    left:0!important;
+    color: #fff!important;
+    font-size: 16px
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > i {
+    font-size: 16px;
+    line-height: 40px;    
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > i {
+    line-height: 45px;
+    font-size: 20px;
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > label,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > label {
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    cursor: text;
+    font-size: 16px;
+    font-weight: normal;
+    transition: .25s ease;
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > label,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > label {
+    color: white;
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > input,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > input {
+    padding-left: 35px;
+    color: #fff!important;
+    padding-right: 12px;
+    background: none;
+    border: none;
+    display: block;
+    width: 100%;
+    padding-top: 18px;
+    height: 45px;
+    color: #d8ddaa!important;
+    font-size: 18px;
+    transition: .3s ease;
+}
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > input.inpt-email:valid ~ label,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > input.inpt-pass:valid ~ label {
+  top: 0;
+  font-size: 12px;
+  font-weight: normal;
+  color: #d8ddaa;
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > input:focus,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > input:focus {
+  outline: none;
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > input:focus ~ label,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > input:focus ~ label {
+  top: 0;
+  font-size: 12px;
+  font-weight: normal;
+  color: #d8ddaa;
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > input:focus ~ .bar:before,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > input:focus ~ .bar:before {
+  transform: translateX(0);
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > input:-webkit-autofill,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+  -webkit-text-fill-color: white !important;
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > input:valid ~ .bar,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > input:valid ~ .bar {
+  background: #d8ddaa!important;
+}
+
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-email > input:valid ~ i.form-control-feedback,
+body > div.login-box > div.login-box-body > form > div.form-group.has-feedback.form-pass > input:valid ~ i.form-control-feedback {
+  background: red!important;
+}
+
+.login-box-body > form > .form-group > .bar {
+  background: rgba(255, 255, 255)!important;
+  content: '';
+  width: 100%;
+  height: 3px;
+  transition: .3s ease;
+  position: relative;
+}
+.login-box-body > form > .form-group > .bar:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  background: #d8ddaa;
+  transform: translateX(-100%);
+  transition: 300ms ease all;
+  left: 0%;
+}
+
+.login-remember {
+    opacity: 0.5;
+    padding-bottom: 20px
+}
+
+.login-remember i {
+    font-size: 14px!important;
+}
+
+.btn-access {
+    color: #0E2837;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.login-box-body > div > a.btn-facebook {
+    border: none;
+    padding: 5px 12px; 
+}
+
+.content-login-register a{
+    color: #fff;
+    margin-top: 15px
+}
+
+.content-login-register a:hover{
+    color: #ddd;
+}
+
+.content-login-register a span{
+    opacity: 0.5!important;
+}
+
+@media screen and (max-width: 640px) {
+    body.login-page > div > div.login-box-body {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.copy-login {
+    position: absolute;
+    bottom: 8px; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 290px;
+}
+
+.info-copy-login {
+    display: block;
+    text-align: center;
+    color:#fff;
+}
+
+.social-auth-links {
+    display: none;
+}
+
+.login-box {
+  animation-duration: .6s;
+  animation-delay: .2s;
+
+}

@@ -1,0 +1,134 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 30/05/2019 13:50
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-love:before { content: "\f100"; }
+.flaticon-team:before { content: "\f101"; }
+.flaticon-check-in:before { content: "\f102"; }
+.flaticon-check-in-1:before { content: "\f103"; }
+.flaticon-guest-list:before { content: "\f104"; }
+.flaticon-seating-guest:before { content: "\f105"; }
+.flaticon-hotel-bell:before { content: "\f106"; }
+.flaticon-door-hanger:before { content: "\f107"; }
+.flaticon-luggage:before { content: "\f108"; }
+.flaticon-breakfast:before { content: "\f109"; }
+.flaticon-booking:before { content: "\f10a"; }
+.flaticon-key:before { content: "\f10b"; }
+.flaticon-bell:before { content: "\f10c"; }
+.flaticon-hotel:before { content: "\f10d"; }
+.flaticon-hotel-1:before { content: "\f10e"; }
+.flaticon-hotel-2:before { content: "\f10f"; }
+.flaticon-payment-method:before { content: "\f110"; }
+.flaticon-pay:before { content: "\f111"; }
+.flaticon-bill:before { content: "\f112"; }
+.flaticon-receipt:before { content: "\f113"; }
+.flaticon-credit-card:before { content: "\f114"; }
+.flaticon-receipt-1:before { content: "\f115"; }
+.flaticon-customers:before { content: "\f116"; }
+.flaticon-business-and-finance:before { content: "\f117"; }
+.flaticon-loan:before { content: "\f118"; }
+.flaticon-note:before { content: "\f119"; }
+.flaticon-note-1:before { content: "\f11a"; }
+.flaticon-notepad:before { content: "\f11b"; }
+.flaticon-printer:before { content: "\f11c"; }
+.flaticon-printer-1:before { content: "\f11d"; }
+.flaticon-history:before { content: "\f11e"; }
+.flaticon-history-1:before { content: "\f11f"; }
+.flaticon-medical-history:before { content: "\f120"; }
+.flaticon-menu:before { content: "\f121"; }
+.flaticon-menu-1:before { content: "\f122"; }
+.flaticon-app:before { content: "\f123"; }
+.flaticon-play-button:before { content: "\f124"; }
+.flaticon-download:before { content: "\f125"; }
+.flaticon-next:before { content: "\f126"; }
+.flaticon-back:before { content: "\f127"; }
+.flaticon-exit:before { content: "\f128"; }
+.flaticon-download-1:before { content: "\f129"; }
+.flaticon-menu-2:before { content: "\f12a"; }
+.flaticon-apps:before { content: "\f12b"; }
+.flaticon-menu-3:before { content: "\f12c"; }
+.flaticon-menu-4:before { content: "\f12d"; }
+.flaticon-menu-5:before { content: "\f12e"; }
+    
+    $font-Flaticon-love: "\f100";
+    $font-Flaticon-team: "\f101";
+    $font-Flaticon-check-in: "\f102";
+    $font-Flaticon-check-in-1: "\f103";
+    $font-Flaticon-guest-list: "\f104";
+    $font-Flaticon-seating-guest: "\f105";
+    $font-Flaticon-hotel-bell: "\f106";
+    $font-Flaticon-door-hanger: "\f107";
+    $font-Flaticon-luggage: "\f108";
+    $font-Flaticon-breakfast: "\f109";
+    $font-Flaticon-booking: "\f10a";
+    $font-Flaticon-key: "\f10b";
+    $font-Flaticon-bell: "\f10c";
+    $font-Flaticon-hotel: "\f10d";
+    $font-Flaticon-hotel-1: "\f10e";
+    $font-Flaticon-hotel-2: "\f10f";
+    $font-Flaticon-payment-method: "\f110";
+    $font-Flaticon-pay: "\f111";
+    $font-Flaticon-bill: "\f112";
+    $font-Flaticon-receipt: "\f113";
+    $font-Flaticon-credit-card: "\f114";
+    $font-Flaticon-receipt-1: "\f115";
+    $font-Flaticon-customers: "\f116";
+    $font-Flaticon-business-and-finance: "\f117";
+    $font-Flaticon-loan: "\f118";
+    $font-Flaticon-note: "\f119";
+    $font-Flaticon-note-1: "\f11a";
+    $font-Flaticon-notepad: "\f11b";
+    $font-Flaticon-printer: "\f11c";
+    $font-Flaticon-printer-1: "\f11d";
+    $font-Flaticon-history: "\f11e";
+    $font-Flaticon-history-1: "\f11f";
+    $font-Flaticon-medical-history: "\f120";
+    $font-Flaticon-menu: "\f121";
+    $font-Flaticon-menu-1: "\f122";
+    $font-Flaticon-app: "\f123";
+    $font-Flaticon-play-button: "\f124";
+    $font-Flaticon-download: "\f125";
+    $font-Flaticon-next: "\f126";
+    $font-Flaticon-back: "\f127";
+    $font-Flaticon-exit: "\f128";
+    $font-Flaticon-download-1: "\f129";
+    $font-Flaticon-menu-2: "\f12a";
+    $font-Flaticon-apps: "\f12b";
+    $font-Flaticon-menu-3: "\f12c";
+    $font-Flaticon-menu-4: "\f12d";
+    $font-Flaticon-menu-5: "\f12e";
