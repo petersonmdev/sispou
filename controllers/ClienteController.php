@@ -39,6 +39,50 @@ class ClienteController extends Controller
         ];
     }
 
+
+    /**
+     * custom sispou pages
+     * @return mixed
+     */
+    public function actionPessoa(){
+        return $this->render('pessoa');
+    }
+
+    /**
+     * custom sispou pages
+     * @return mixed
+     */
+    public function actionPessoaCadastro(){
+        return $this->render('pessoa-cadastro');
+    }
+
+
+
+
+    public function actionAgente(){
+        return $this->render('agente');
+    }
+
+    /**
+     * custom sispou pages
+     * @return mixed
+     */
+    public function actionAgenteCadastro(){
+        return $this->render('agente-cadastro');
+    }
+
+
+
+
+    public function actionEmpresa(){
+        return $this->render('empresa');
+    }
+    public function actionEmpresaCadastro(){
+        return $this->render('empresa-cadastro');
+    }
+
+
+
     /**
      * Lists all Cliente models.
      * @return mixed
@@ -143,24 +187,6 @@ class ClienteController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-
-
-    // custom sispou pages
-
-    public function actionPessoa(){
-        return $this->render('pessoa');
-    }
-
-
-    public function actionAgente(){
-        return $this->render('agente');
-    }
-
-
-    public function actionEmpresa(){
-        return $this->render('empresa');
     }
 
 

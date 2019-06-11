@@ -163,6 +163,10 @@ class GestaoPousadaController extends Controller
         return $this->render('reservas');
     }
 
+    public function actionReservaCadastro(){
+        return $this->render('reserva-cadastro');
+    }
+
 
     public function actionEstoque(){
         return $this->render('estoque');
