@@ -26,9 +26,6 @@ class LoginAsset extends AssetBundle
     public $js = [
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
-        'app\assets\CommonAsset',
         'dmstr\web\AdminLteAsset',
     ];
 }

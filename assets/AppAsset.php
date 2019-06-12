@@ -27,18 +27,11 @@ class AppAsset extends AssetBundle
         'libs/fonts/font-sispou/css/flaticon.css',
         'libs/fonts/font-awesome/css/font-awesome.css',
         'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
-        // 'vendor/almasaeed2010/adminlte/bower_components/fullcalendar/dist\fullcalendar.min.css',
-        // 'vendor/almasaeed2010/adminlte/bower_components/fullcalendar/dist\fullcalendar.print.min.css',
     ];
     public $js = [
-        'js/layout.css',
         'js/inicio.js',
-
-        // 'vendor/almasaeed2010/adminlte/bower_components/moment/momen/.js',
-        // 'vendor/almasaeed2010/adminlte/bower_components/fullcalendar/dist/fullcalendar.min.js',
+        'js/monitoramento.js'
     ];
     public $depends = [
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
     ];
 }

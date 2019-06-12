@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 <header class="main-header">
       <!-- Logo -->
-      <a href="dashboard.html" class="logo">
+      <a href="/" class="logo">
         <!-- mini logo -->
         <span class="logo-mini"><b>SIS</b><br /><small>POU</small></span>
         <!-- logo regular -->
@@ -84,7 +84,8 @@ use yii\helpers\Html;
                   <a href="configuracoes.html">Configurações</a>
                 </li>
                 <li class="item">
-                  <a href="login.html">Sair</a>
+                  <?= Html::a( 'Sair', ['/site/logout'], ['data-method' => 'post'] ) ?>
+                  <!-- <a href="login.html">Sair</a> -->
                 </li>
               </ul>
             </li>
