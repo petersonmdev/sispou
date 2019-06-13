@@ -30,12 +30,12 @@ $fieldOptions2 = [
         <?php $form = ActiveForm::begin(['enableClientValidation' => false]); ?>
 
         <?= $form
-            ->field($model, 'username', $fieldOptions1)
+            ->field($model, 'email', $fieldOptions1)
             ->textInput(['placeholder' => false, 'class' => 'form-control inpt-email', 'id' => false, 'required' => 'required'])
             ->label(false) ?>
 
         <?= $form
-            ->field($model, 'password', $fieldOptions2)
+            ->field($model, 'password_hash', $fieldOptions2)
             ->passwordInput(['placeholder' => false, 'class' => 'form-control inpt-pass', 'id' => false, 'required' => 'required'])
             ->label(false) ?>
 

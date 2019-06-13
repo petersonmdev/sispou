@@ -19,18 +19,16 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
+    /**
+     * {@inheritdoc}
+     */
     public function behaviors()
     {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout', 'signup'], // remember to add index after login edition
+                'only' => ['logout'],
                 'rules' => [
-                    [
-                        'actions' => ['signup'],
-                        'allow' => true,
-                        'roles' => ['?'],
-                    ],
                     [
                         'actions' => ['logout'],
                         'allow' => true,
@@ -63,14 +61,15 @@ class SiteController extends Controller
         ];
     }
 
+
     /**
      * Displays homepage.
      *
      * @return string
      */
-    public function actionIndex()
+    public function actionDashboard()
     {
-        return $this->render('index');
+        return $this->render('dashboard');
     }
 
     /**
@@ -80,11 +79,12 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-
-        //$this->layout = 'main-login';
+        // Definine o layout da view (isto não carrega a view, mas sim o layout específico para este controller)
+        Yii::$app->controller->layout = 'main-login';
         
-        if (Yii::$app->user->isGuest) {
-            return $this->goHome();
+        if (!Yii::$app->user->isGuest) {
+            //return $this->goHome();
+            return $this->render('dashboard');
         }
 
         $model = new LoginForm();
@@ -92,7 +92,7 @@ class SiteController extends Controller
             return $this->goBack();
         }
 
-        $model->password = '';
+        $model->password_hash = '';
         return $this->render('login', [
             'model' => $model,
         ]);
@@ -107,7 +107,7 @@ class SiteController extends Controller
     {
         Yii::$app->user->logout();
 
-        return $this->render('login');
+        return $this->render('register');
     }
 
 
@@ -119,8 +119,7 @@ class SiteController extends Controller
      */
     public function actionRegister()
     {
-        $this->layout = 'main-login';        
-
+        $this->layout = 'main-login';
         return $this->render('register');
     }
 
@@ -175,7 +174,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Requests password reset.
+     * Requests password_hash reset.
      *
      * @return mixed
      */
@@ -199,7 +198,7 @@ class SiteController extends Controller
     }
 
     /**
-     * Resets password.
+     * Resets password_hash.
      *
      * @param string $token
      * @return mixed
@@ -214,7 +213,7 @@ class SiteController extends Controller
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->resetPassword()) {
-            Yii::$app->session->setFlash('success', 'New password saved.');
+            Yii::$app->session->setFlash('success', 'New password_hash saved.');
 
             return $this->goHome();
         }
