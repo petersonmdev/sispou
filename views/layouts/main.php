@@ -63,6 +63,8 @@ if (Yii::$app->controller->action->id === 'login') {
             ['content' => $content, 'directoryAsset' => $directoryAsset]
         ) ?>
 
+        <?= $this->render( 'footer.php' ) ?>
+
     </div>
 
     <?php $this->endBody() ?>

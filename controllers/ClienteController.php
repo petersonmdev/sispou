@@ -45,6 +45,7 @@ class ClienteController extends Controller
      * @return mixed
      */
     public function actionPessoa(){
+       
         return $this->render('pessoa');
     }
 
