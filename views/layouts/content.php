@@ -1,6 +1,19 @@
 
+<?php
 
+use app\widgets\Alert;
 
-<?php //= Alert::widget() ?>
+?>
 
-<?= $content ?>
+<div class="content-wrapper">
+
+	<?= $this->render(
+        'breadcrumb.php',
+        ['directoryAsset' => $directoryAsset]
+    ) ?>
+
+	<?= Alert::widget() ?>
+
+	<?= $content ?>
+
+</div>

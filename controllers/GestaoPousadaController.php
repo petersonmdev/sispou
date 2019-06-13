@@ -15,6 +15,10 @@ use yii\filters\AccessControl;
  */
 class GestaoPousadaController extends Controller
 {
+
+    public $pagename = '';
+
+
     /**
      * {@inheritdoc}
      */
@@ -150,7 +154,8 @@ class GestaoPousadaController extends Controller
     // custom sispou pages
 
     public function actionMonitoramento(){
-        return $this->render('monitoramento');
+        $pagename = 'Monitoramento';
+        return $this->render('monitoramento', ['pagename' => $pagename] );
     }
 
 

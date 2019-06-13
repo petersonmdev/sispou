@@ -1,9 +1,3 @@
-<?php
-use yii\helpers\Html;
-
-/* @var $this \yii\web\View */
-/* @var $content string */
-?>
 
 <footer class="main-footer footer-sispou">
   <div class="pull-right hidden-xs">
