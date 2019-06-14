@@ -1,3 +1,6 @@
+html, body{  
+  font-family: 'Open Sans', sans-serif !important;
+}
 body.skin-sispou > div.wrapper > header.main-header > nav.navbar {
   background-color: #506C61;
   height: 80px;

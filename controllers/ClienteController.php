@@ -23,8 +23,15 @@ class ClienteController extends Controller
      * @return mixed
      */
     public function actionPessoa(){
-       
-        return $this->render('pessoa');
+        
+        $searchModel = new ClienteSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize=1;
+
+        return $this->render('pessoa', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     /**
@@ -32,7 +39,21 @@ class ClienteController extends Controller
      * @return mixed
      */
     public function actionPessoaCadastro(){
-        return $this->render('pessoa-cadastro');
+        $model = new Cliente();
+
+        if ($model->load(Yii::$app->request->post()) ) {
+
+            $model->pousada_id = isset($data['pousada_id']) ? $data['pousada_id'] : Yii::$app->user->identity->id;
+            
+            if($model->validate()){
+                $model->save();
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
+        }
+
+        return $this->render('pessoa-cadastro', [
+            'model' => $model,
+        ]);
     }
 
 

@@ -45,7 +45,7 @@ class Cliente extends \yii\db\ActiveRecord
         return [
             [['pousada_id', 'nome', 'endereco', 'bairro', 'cidade', 'uf', 'email'], 'required'],
             [['pousada_id'], 'integer'],
-            [['created_at', 'updated_at'], 'safe'],
+            [['created_at', 'updated_at', 'globalSearch'], 'safe'],
             [['nome', 'endereco', 'numero', 'bairro', 'cidade', 'uf', 'email'], 'string', 'max' => 255],
             [['cpf',], 'string', 'max' => 14],
             [['telefone'], 'string', 'max' => 16],
@@ -54,6 +54,8 @@ class Cliente extends \yii\db\ActiveRecord
             [['cep'], 'string', 'max' => 9],
             [['celular'], 'string', 'max' => 16],
             [['pousada_id'], 'exist', 'skipOnError' => true, 'targetClass' => Pousada::className(), 'targetAttribute' => ['pousada_id' => 'id']],
+            [['created_at'], 'default', 'value' => date('Y-m-d H:i:s') ],
+            [['pousada_id'], 'default', 'value' => Yii::$app->user->identity->id ],
         ];
     }
 

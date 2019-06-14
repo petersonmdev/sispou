@@ -1,122 +1,44 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+use yii\widgets\Pjax;
+
+?>
 
 <section class="content">
    <div class="col-md-12 content-client box">
       <hr>
       <div class="content-list-client">
-         <div class="row">
-            <div class="col-xs-5">
-               <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Pesquisar">
-               </div>
-            </div>
-            <div class="col-xs-3">
-               <div class="form-group">
-                  <select class="form-control" placeholder="Pesquisar por...">
-                     <option>Geral</option>
-                     <option>Nome</option>
-                     <option>CPF</option>
-                     <option>Cidade</option>
-                     <option>Telefone</option>
-                     <option>Email</option>
-                  </select>
-               </div>
-            </div>
-            <div class="col-xs-2">
-               <button type="button" class="btn btn-block btn-success">Filtrar</button>
-            </div>
-            <div class="col-xs-2">
-               <button type="button" class="btn btn-block btn-default">Limpar filtro</button>
-            </div>
-         </div>
-         <div class="row b-3">
-            <div class="col-sm-12 b-3">
-               <div class="dataTables_info" id="example1_info" role="status" aria-live="polite"><strong>1-10</strong> de <strong>157 Clientes</strong></div>
-            </div>
-         </div>
-         <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
-            <thead>
-               <tr role="row">
-                  <th class="sorting_asc">Nome</th>
-                  <th class="sorting">CPF</th>
-                  <th class="sorting">Cidade</th>
-                  <th class="sorting">Telefone</th>
-                  <th class="sorting">Email</th>
-               </tr>
-            </thead>
-            <tbody>
-               <tr role="row" class="odd">
-                  <td class="sorting_1">Fulano Souza</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-               <tr role="row" class="even">
-                  <td class="sorting_1">Ciclano Silva</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-               <tr role="row" class="odd">
-                  <td class="sorting_1">Beltrano Batista</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-               <tr role="row" class="even">
-                  <td class="sorting_1">Bartolomeu Augusto</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-               <tr role="row" class="odd">
-                  <td class="sorting_1">Jandimar Rocha</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-               <tr role="row" class="even">
-                  <td class="sorting_1">Alfranio Bessa</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-               <tr role="row" class="odd">
-                  <td class="sorting_1">Dona Maricotinha</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-               <tr role="row" class="even">
-                  <td class="sorting_1">Bezerra da Silva</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-               <tr role="row" class="odd">
-                  <td class="sorting_1">Gertrudes Maria</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-               <tr role="row" class="even">
-                  <td class="sorting_1">Francisco Coco</td>
-                  <td>000.000.000-00</td>
-                  <td>Caraguatatuba - SP</td>
-                  <td>(99)99999-9999</td>
-                  <td>email@email.com</td>
-               </tr>
-            </tbody>
-            <tfoot></tfoot>
-         </table>
+
+         <?php Pjax::begin(); ?>
+            <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+
+            <?= GridView::widget([
+               'dataProvider' => $dataProvider,
+               //'filterModel' => $searchModel,
+               'columns' => [
+                     //['class' => 'yii\grid\SerialColumn'],
+
+                     //'id',
+                     'nome',
+                     //'sexo',
+                     //'data_nascimento',
+                     'cpf',
+                     //'cep',
+                     //'endereco',
+                     //'bairro',
+                     //'numero',
+                     'cidade',
+                     //'uf',
+                     'telefone',
+                     'email:email',
+
+                     ['class' => 'yii\grid\ActionColumn'],
+               ],
+            ]); ?>
+         <?php Pjax::end(); ?>
+
          <div class="row">
             <div class="col-sm-5">
                <button type="button" class="btn btn-success">

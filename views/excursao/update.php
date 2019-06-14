@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = 'Atualizar';
 ?>
 <div class="excursao-update">
 
-	<?php if($model->tipo == 'pessoa'): ?>
+	<?php /*if($model->tipo == 'pessoa'): ?>
 	    <?= $this->render('_form-pessoa', [
 	        'model' => $model,
 	    ]) ?>
@@ -22,6 +22,6 @@ $this->params['breadcrumbs'][] = 'Atualizar';
 	    <?= $this->render('_form-empresa', [
 	        'model' => $model,
 	    ]) ?>
-	<?php endif; ?>
+	<?php endif; */ ?>
 
 </div>

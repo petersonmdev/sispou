@@ -12,6 +12,11 @@ use app\models\Cliente;
  */
 class ClienteSearch extends Cliente
 {
+
+    // global search field on index page
+    public $globalSearch;
+
+
     /**
      * {@inheritdoc}
      */
@@ -19,7 +24,7 @@ class ClienteSearch extends Cliente
     {
         return [
             [['id', 'pousada_id'], 'integer'],
-            [['nome', 'cpf', 'sexo', 'nascimento', 'cep', 'endereco', 'numero', 'bairro', 'cidade', 'uf', 'telefone', 'celular', 'email', 'created_at', 'updated_at'], 'safe'],
+            [['nome', 'cpf', 'sexo', 'nascimento', 'cep', 'endereco', 'numero', 'bairro', 'cidade', 'uf', 'telefone', 'celular', 'email', 'created_at', 'updated_at', 'globalSearch'], 'safe'],
         ];
     }
 
@@ -77,7 +82,18 @@ class ClienteSearch extends Cliente
             ->andFilterWhere(['like', 'uf', $this->uf])
             ->andFilterWhere(['like', 'telefone', $this->telefone])
             ->andFilterWhere(['like', 'celular', $this->celular])
-            ->andFilterWhere(['like', 'email', $this->email]);
+            ->andFilterWhere(['like', 'email', $this->email]);        
+
+        $query->andFilterWhere(
+            [
+                'or',
+                ['like', 'nome', $this->globalSearch],
+                ['like', 'cpf', $this->globalSearch],
+                ['like', 'cidade', $this->globalSearch],
+                ['like', 'telefone', $this->globalSearch],
+                ['like', 'email', $this->globalSearch]
+            ]
+        );
 
         return $dataProvider;
     }

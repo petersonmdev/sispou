@@ -11,22 +11,22 @@ use yii\widgets\ActiveForm;
 <div class="cliente-search">
 
     <?php $form = ActiveForm::begin([
-        'action' => ['index'],
+        'action' => ['pessoa'],
         'method' => 'get',
         'options' => [
             'data-pjax' => 1
         ],
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?php // $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'nome') ?>
+    <?php // $form->field($model, 'nome') ?>
 
-    <?= $form->field($model, 'sexo') ?>
+    <?php // $form->field($model, 'sexo') ?>
 
-    <?= $form->field($model, 'data_nascimento') ?>
+    <?php // $form->field($model, 'nascimento') ?>
 
-    <?= $form->field($model, 'cpf') ?>
+    <?php // $form->field($model, 'cpf') ?>
 
     <?php // echo $form->field($model, 'cep') ?>
 
@@ -44,10 +44,32 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'email') ?>
 
-    <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
-    </div>
+    
+        <div class="row">
+            <div class="col-xs-5">
+               <div class="form-group">
+                  <?= $form->field($model, 'globalSearch')->input('text', ['placeholder' => "Pesquisar"])->label(false) ?>
+               </div>
+            </div>
+            <div class="col-xs-3">
+               <div class="form-group">
+                  <select class="form-control" placeholder="Pesquisar por...">
+                     <option>Geral</option>
+                     <option>Nome</option>
+                     <option>CPF</option>
+                     <option>Cidade</option>
+                     <option>Telefone</option>
+                     <option>Email</option>
+                  </select>
+               </div>
+            </div>
+            <div class="col-xs-2">
+               <?= Html::submitButton('Filtrar', ['class' => 'btn btn-block btn-success']) ?>
+            </div>
+            <div class="col-xs-2">
+               <?= Html::resetButton('Limpar filtro', ['class' => 'btn btn-block btn-default']) ?>
+            </div>
+         </div>
 
     <?php ActiveForm::end(); ?>
 
