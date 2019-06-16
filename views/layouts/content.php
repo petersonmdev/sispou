@@ -12,7 +12,6 @@ use app\widgets\Alert;
         ['directoryAsset' => $directoryAsset]
     ) ?>
 
-	<?= Alert::widget() ?>
 
 	<?= $content ?>
 

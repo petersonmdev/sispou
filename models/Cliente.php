@@ -43,7 +43,7 @@ class Cliente extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['pousada_id', 'nome', 'endereco', 'bairro', 'cidade', 'uf', 'email'], 'required'],
+            [['pousada_id', 'nome', 'email', 'cliente_tipo'], 'required'],
             [['pousada_id'], 'integer'],
             [['created_at', 'updated_at', 'globalSearch'], 'safe'],
             [['nome', 'endereco', 'numero', 'bairro', 'cidade', 'uf', 'email'], 'string', 'max' => 255],
@@ -53,6 +53,8 @@ class Cliente extends \yii\db\ActiveRecord
             [['nascimento'], 'string', 'max' => 10],
             [['cep'], 'string', 'max' => 9],
             [['celular'], 'string', 'max' => 16],
+            [['cliente_tipo'], 'string', 'max' => 7],
+            [['nome_empresa'], 'string', 'max' => 45],
             [['pousada_id'], 'exist', 'skipOnError' => true, 'targetClass' => Pousada::className(), 'targetAttribute' => ['pousada_id' => 'id']],
             [['created_at'], 'default', 'value' => date('Y-m-d H:i:s') ],
             [['pousada_id'], 'default', 'value' => Yii::$app->user->identity->id ],
@@ -80,6 +82,8 @@ class Cliente extends \yii\db\ActiveRecord
             'telefone' => 'Telefone',
             'celular' => 'Celular',
             'email' => 'Email',
+            'nome_empresa' => 'Empresa',
+            'cliente_tipo' => 'Cliente/Tipo',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];

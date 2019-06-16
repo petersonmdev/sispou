@@ -3,52 +3,27 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-/* @var $this yii\web\View */
-/* @var $model app\models\ClienteSearch */
-/* @var $form yii\widgets\ActiveForm */
 ?>
 
 <div class="cliente-search">
 
-    <?php $form = ActiveForm::begin([
-        'action' => ['pessoa'],
-        'method' => 'get',
-        'options' => [
-            'data-pjax' => 1
-        ],
-    ]); ?>
-
-    <?php // $form->field($model, 'id') ?>
-
-    <?php // $form->field($model, 'nome') ?>
-
-    <?php // $form->field($model, 'sexo') ?>
-
-    <?php // $form->field($model, 'nascimento') ?>
-
-    <?php // $form->field($model, 'cpf') ?>
-
-    <?php // echo $form->field($model, 'cep') ?>
-
-    <?php // echo $form->field($model, 'endereco') ?>
-
-    <?php // echo $form->field($model, 'bairro') ?>
-
-    <?php // echo $form->field($model, 'numero') ?>
-
-    <?php // echo $form->field($model, 'cidade') ?>
-
-    <?php // echo $form->field($model, 'uf') ?>
-
-    <?php // echo $form->field($model, 'telefone') ?>
-
-    <?php // echo $form->field($model, 'email') ?>
+    <?php
+      $form = ActiveForm::begin(
+        [
+          'action' => [Yii::$app->controller->action->id],
+          'method' => 'get',
+          'options' => [
+              'data-pjax' => 1
+          ],
+      ]);
+    ?>
 
     
         <div class="row">
             <div class="col-xs-5">
                <div class="form-group">
                   <?= $form->field($model, 'globalSearch')->input('text', ['placeholder' => "Pesquisar"])->label(false) ?>
+                  <i class="fa fa-search icon-search-filter"></i>
                </div>
             </div>
             <div class="col-xs-3">
@@ -64,10 +39,10 @@ use yii\widgets\ActiveForm;
                </div>
             </div>
             <div class="col-xs-2">
-               <?= Html::submitButton('Filtrar', ['class' => 'btn btn-block btn-success']) ?>
+               <?= Html::submitButton('Filtrar', ['class' => 'btn btn-sispou btn-sispou-success']) ?>
             </div>
             <div class="col-xs-2">
-               <?= Html::resetButton('Limpar filtro', ['class' => 'btn btn-block btn-default']) ?>
+               <?= Html::resetButton('Limpar filtro', ['class' => 'btn btn-sispou btn-sispou-return']) ?>
             </div>
          </div>
 

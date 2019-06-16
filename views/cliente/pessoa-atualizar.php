@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
                <?= $this->render('_form-pessoa', [
                     'model' => $model,
                 ]) ?>
-                
+
             </div>
             <!-- /.box-body -->
          </div>
