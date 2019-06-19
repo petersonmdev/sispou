@@ -27,7 +27,7 @@ use Yii;
  *
  * @property Pousada $pousada
  */
-class Cliente extends \yii\db\ActiveRecord
+class Cadastro extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -83,7 +83,7 @@ class Cliente extends \yii\db\ActiveRecord
             'celular' => 'Celular',
             'email' => 'Email',
             'nome_empresa' => 'Empresa',
-            'cliente_tipo' => 'Cliente/Tipo',
+            'cliente_tipo' => 'Cadastro/Tipo',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
         ];

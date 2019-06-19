@@ -3,88 +3,88 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Cliente;
-use app\models\ClienteSearch;
+use app\models\Cadastro;
+use app\models\CadastroSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
 /**
- * ClienteController implements the CRUD actions for Cliente model.
+ * CadastroController implements the CRUD actions for Cadastro model.
  */
-class ClienteController extends Controller
+class CadastroController extends Controller
 {
     
     ////////////////////////////////////
     //////////////////////////////////
-    // ACTIONS DE PESSOA
+    // ACTIONS DE cliente
     ///////////////////////////////
-    public function actionPessoa(){
+    public function actionCliente(){
         
-        $searchModel = new ClienteSearch();
+        $searchModel = new CadastroSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->query->andWhere(['cliente_tipo' => 'pessoa']);
         $dataProvider->pagination->pageSize=10;
 
-        return $this->render('pessoa', [
+        return $this->render('cliente', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
 
 
-    public function actionPessoaCadastro()
+    public function actionClienteCadastro()
     {
-        $model = new Cliente();
+        $model = new Cadastro();
 
         if ($model->load(Yii::$app->request->post()) ) {
 
             $model->pousada_id = Yii::$app->user->identity->id;
-            $model->cliente_tipo = 'pessoa';
+            $model->cliente_tipo = 'cliente';
             
             if($model->validate()){
                 $model->save();
 
-                Yii::$app->session->setFlash('pessoa-dados-cadastrais', 'Cadastro Realizado!');
-                return $this->redirect(['pessoa-dados-cadastrais', 'id' => $model->id]);
+                Yii::$app->session->setFlash('cliente-dados-cadastrais', 'Cadastro Realizado!');
+                return $this->redirect(['cliente-dados-cadastrais', 'id' => $model->id]);
             }
         }
 
-        return $this->render('pessoa-cadastro', [
+        return $this->render('cliente-cadastro', [
             'model' => $model,
         ]);
     }
 
 
-    public function actionPessoaAtualizar($id)
+    public function actionClienteAtualizar($id)
     {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) ) {
 
             $model->pousada_id = Yii::$app->user->identity->id;
-            $model->cliente_tipo = 'pessoa';
+            $model->cliente_tipo = 'cliente';
             
             if($model->validate()){
                 $model->save();
 
                 Yii::$app->session->setFlash(['options' => ['class' => 'alert-info']], 'Cadastro Atualizado!');
-                return $this->redirect(['pessoa-dados-cadastrais', 'id' => $model->id]);
+                return $this->redirect(['cliente-dados-cadastrais', 'id' => $model->id]);
             }
             
         }
 
-        return $this->render('pessoa-atualizar', [
+        return $this->render('cliente-atualizar', [
             'model' => $model,
         ]);
     }
 
 
-    public function actionPessoaDadosCadastrais($id)
+    public function actionClienteDadosCadastrais($id)
     {
 
-        return $this->render('pessoa-dados-cadastrais', [
+        return $this->render('cliente-dados-cadastrais', [
             'model' => $this->findModel($id),
         ]);
     }
@@ -96,7 +96,7 @@ class ClienteController extends Controller
     ///////////////////////////////
     public function actionAgente(){        
         
-        $searchModel = new ClienteSearch();
+        $searchModel = new CadastroSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->query->andWhere(['cliente_tipo' => 'agente']);
         $dataProvider->pagination->pageSize=10;
@@ -111,7 +111,7 @@ class ClienteController extends Controller
     public function actionAgenteCadastro()
     {
         
-        $model = new Cliente();
+        $model = new Cadastro();
 
         if ($model->load(Yii::$app->request->post()) ) {
 
@@ -165,7 +165,7 @@ class ClienteController extends Controller
     ///////////////////////////////
     public function actionEmpresa(){
         
-        $searchModel = new ClienteSearch();
+        $searchModel = new CadastroSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->query->andWhere(['cliente_tipo' => 'empresa']);
         $dataProvider->pagination->pageSize=10;
@@ -179,7 +179,7 @@ class ClienteController extends Controller
 
     public function actionEmpresaCadastro()
     {
-        $model = new Cliente();
+        $model = new Cadastro();
 
         if ($model->load(Yii::$app->request->post()) ) {
 
@@ -241,7 +241,7 @@ class ClienteController extends Controller
 
     protected function findModel($id)
     {
-        if (($model = Cliente::findOne($id)) !== null) {
+        if (($model = Cadastro::findOne($id)) !== null) {
             return $model;
         }
 

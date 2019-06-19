@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Cliente;
+use app\models\Cadastro;
 
 /**
- * ClienteSearch represents the model behind the search form of `app\models\Cliente`.
+ * CadastroSearch represents the model behind the search form of `app\models\Cadastro`.
  */
-class ClienteSearch extends Cliente
+class CadastroSearch extends Cadastro
 {
 
     // global search field on index page
@@ -46,7 +46,7 @@ class ClienteSearch extends Cliente
      */
     public function search($params)
     {
-        $query = Cliente::find();
+        $query = Cadastro::find();
 
         // add conditions that should always apply here
 

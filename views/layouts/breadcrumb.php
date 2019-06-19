@@ -16,8 +16,6 @@ use app\widgets\Alert;
         'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
     ]) ?>
 
-	<div class="alert alert-dismissible">
-	    <?= Alert::widget() ?>
-  	</div>
+	<?= Alert::widget() ?>
 
 </section>

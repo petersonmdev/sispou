@@ -21,6 +21,9 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'NkJPSQITVipEv2rqS_D0CJsduSxodz5W',
         ],
+        'formatter' => [
+            'dateFormat' => 'php:d/m/Y'
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

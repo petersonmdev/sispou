@@ -15,7 +15,7 @@ use yii\widgets\ActiveForm;
          <div class="box">
             <div class="box-body">
 
-               <?= $this->render('_form-pessoa', [
+               <?= $this->render('_form-cliente', [
                     'model' => $model,
                 ]) ?>
                 

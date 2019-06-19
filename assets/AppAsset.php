@@ -50,6 +50,7 @@ class AppAsset extends AssetBundle
         'js/inicio.js',
         'js/monitoramento.js'
     ];
-    public $depends = [
+    public $depends = [        
+        'dmstr\web\AdminLteAsset',
     ];
 }

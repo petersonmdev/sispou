@@ -20,13 +20,13 @@
                 'items' => [
                     ['label' => 'Inicio', 'icon' => 'home', 'url' => ['/']],
                     [/// MENU CLIENTES
-                        'label' => 'Clientes',
+                        'label' => 'Cadastros',
                         'icon' => 'users',
                         'url' => '#',
                         'items' => [
-                            ['label' => 'Pessoa', 'icon' => 'angle-right', 'url' => ['/cliente/pessoa'],],
-                            ['label' => 'Agente', 'icon' => 'angle-right', 'url' => ['/cliente/agente'],],
-                            ['label' => 'Empresa', 'icon' => 'angle-right', 'url' => ['/cliente/empresa'],]
+                            ['label' => 'Cliente', 'icon' => 'angle-right', 'url' => ['/cadastro/cliente'],],
+                            ['label' => 'Agente (Guia)', 'icon' => 'angle-right', 'url' => ['/cadastro/agente'],],
+                            ['label' => 'Empresa', 'icon' => 'angle-right', 'url' => ['/cadastro/empresa'],]
                         ],
                     ],
                     [/// MENU GESTÃO POUSADA

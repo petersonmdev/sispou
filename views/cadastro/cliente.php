@@ -51,7 +51,7 @@ use yii\helpers\Url;
       <div class="row">
          <div class="col-sm-5">
             <button type="button" class="btn btn-sispou btn-sispou-success">
-               <a href="pessoa-cadastro">Adicionar novo</a>
+               <a href="cliente-cadastro">Adicionar novo</a>
             </button>
          </div>
       </div>
@@ -66,7 +66,7 @@ $this->registerJs("
     $('td').click(function (e) {
         var id = $(this).closest('tr').data('id');
         if(e.target == this)
-            location.href = '" . Url::to(['cliente/pessoa-dados-cadastrais']) . "?id=' + id;
+            location.href = '" . Url::to(['cadastro/cliente-dados-cadastrais']) . "?id=' + id;
     });
 
 ");

@@ -109,12 +109,12 @@ $(function () {
           copiedEventObject.borderColor     = $(this).css('border-color')
 
           // render the event on the calendar
-          // the last `true` argument determines if the event "sticks" (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
+          // the last `true` argument determines if the event 'sticks' (http://arshaw.com/fullcalendar/docs/event_rendering/renderEvent/)
           $('#calendar').fullCalendar('renderEvent', copiedEventObject, true)
 
-          // is the "remove after drop" checkbox checked?
+          // is the 'remove after drop' checkbox checked?
           if ($('#drop-remove').is(':checked')) {
-            // if so, remove the element from the "Draggable Events" list
+            // if so, remove the element from the 'Draggable Events' list
             $(this).remove()
           }
 
