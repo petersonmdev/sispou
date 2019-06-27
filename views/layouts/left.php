@@ -9,7 +9,7 @@
           <div class="pull-left info">
             <?php if(!Yii::$app->user->isGuest ) : ?>
                 <h4><?= Yii::$app->user->identity->nome_fantasia ?></h4>
-                <p><?= Yii::$app->user->identity->email ?></p>
+                <p><?= Yii::$app->user->identity->rp_nome ?></p>
             <?php endif; ?>
           </div>
         </div>

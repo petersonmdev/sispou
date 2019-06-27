@@ -170,5 +170,9 @@ class GestaoPousadaController extends Controller
         return $this->render('relatorios');
     }
 
+    public function actionGestaoHospede(){
+        return $this->render('gestao-hospede');
+    }
+
 
 }
