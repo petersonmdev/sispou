@@ -10,6 +10,8 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 
+use kartik\mpdf\Pdf;
+
 /**
  * CadastroController implements the CRUD actions for Cadastro model.
  */
@@ -69,7 +71,7 @@ class CadastroController extends Controller
             if($model->validate()){
                 $model->save();
 
-                Yii::$app->session->setFlash(['options' => ['class' => 'alert-info']], 'Cadastro Atualizado!');
+                //Yii::$app->session->setFlash(['options' => ['class' => 'alert-info']], 'Cadastro Atualizado!');
                 return $this->redirect(['cliente-dados-cadastrais', 'id' => $model->id]);
             }
             
@@ -87,6 +89,43 @@ class CadastroController extends Controller
         return $this->render('cliente-dados-cadastrais', [
             'model' => $this->findModel($id),
         ]);
+    }
+
+
+
+    public function actionClienteFichaPdf($id) {
+        $model = $this->findModel($id);
+        // get your HTML raw content without any layouts or scripts
+        $content = $this->renderPartial('_cliente-ficha-pdf', ['model'=>$model], true);
+        
+        // setup kartik\mpdf\Pdf component
+        $pdf = new Pdf([
+            // set to use core fonts only
+            'mode' => Pdf::MODE_CORE, 
+            // A4 paper format
+            'format' => Pdf::FORMAT_A4, 
+            // portrait orientation
+            'orientation' => Pdf::ORIENT_PORTRAIT, 
+            // stream to browser inline
+            'destination' => Pdf::DEST_BROWSER, 
+            // your html content input
+            'content' => $content,  
+            // format content from your own css file if needed or use the
+            // enhanced bootstrap css built by Krajee for mPDF formatting 
+            'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
+            // any css to be embedded if required
+            'cssInline' => '.kv-heading-1{font-size:18px}', 
+             // set mPDF properties on the fly
+            'options' => ['title' => 'Sispou - Ficha do Cliente'],
+             // call mPDF methods on the fly
+            'methods' => [ 
+                'SetHeader'=>['Sispou - Ficha Cadastral'], 
+                'SetFooter'=>['{PAGENO}'],
+            ]
+        ]);
+        
+        // return the pdf output as per the destination setting
+        return $pdf->render(); 
     }
 
 

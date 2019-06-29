@@ -66,7 +66,7 @@ $this->registerJs("
     $('td').click(function (e) {
         var id = $(this).closest('tr').data('id');
         if(e.target == this)
-            location.href = '" . Url::to(['cliente/empresa-dados-cadastrais']) . "?id=' + id;
+            location.href = '" . Url::to(['cadastro/empresa-dados-cadastrais']) . "?id=' + id;
     });
 
 ");

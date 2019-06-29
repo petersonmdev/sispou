@@ -58,7 +58,7 @@ use yii\helpers\Html;
 
               <div class="row content-btn-gh">
                 <div class="col-md-12 pull-left">
-                  <?= Html::a('Voltar', ['empresa', 'id' => $model->id], ['class' => 'btn btn-default']) ?>
+                  <?= Html::a('Voltar', ['empresa'], ['class' => 'btn btn-default']) ?>
                   <?= Html::a('Imprimir', ['empresa-ficha', 'id' => $model->id], ['class' => 'btn btn-default']) ?>
                   <?= Html::a('Atualizar', ['empresa-atualizar', 'id' => $model->id], ['class' => 'btn btn-default']) ?>
                 </div>

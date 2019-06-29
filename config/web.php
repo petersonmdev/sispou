@@ -17,10 +17,6 @@ $config = [
     'timeZone' => 'America/Sao_Paulo',
     'charset' => 'UTF-8',
     'components' => [
-        'assetManager' => [
-           'class' => 'yii\web\AssetManager',
-           'forceCopy' => true,
-        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'NkJPSQITVipEv2rqS_D0CJsduSxodz5W',
